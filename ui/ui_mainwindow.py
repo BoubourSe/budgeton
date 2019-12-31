@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/mainwindow.ui',
-# licensing of 'ui/mainwindow.ui' applies.
+# Form implementation generated from reading ui file 'Z:\_Dev\Python\Budgeton\qt_ui\mainwindow.ui',
+# licensing of 'Z:\_Dev\Python\Budgeton\qt_ui\mainwindow.ui' applies.
 #
-# Created: Thu Dec 12 21:25:15 2019
+# Created: Tue Dec 31 17:10:37 2019
 #      by: pyside2-uic  running on PySide2 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -61,6 +61,9 @@ class Ui_MainWindow(object):
         self.actionClose.setObjectName("actionClose")
         self.actionSettings = QtWidgets.QAction(MainWindow)
         self.actionSettings.setObjectName("actionSettings")
+        self.actionOuvrir = QtWidgets.QAction(MainWindow)
+        self.actionOuvrir.setObjectName("actionOuvrir")
+        self.menuFichier.addAction(self.actionOuvrir)
         self.menuFichier.addAction(self.actionSettings)
         self.menuFichier.addSeparator()
         self.menuFichier.addAction(self.actionClose)
@@ -80,4 +83,15 @@ class Ui_MainWindow(object):
         self.actionClose.setToolTip(QtWidgets.QApplication.translate("MainWindow", "<html><head/><body><p>Fermer l\'application</p></body></html>", None, -1))
         self.actionClose.setShortcut(QtWidgets.QApplication.translate("MainWindow", "Ctrl+Q", None, -1))
         self.actionSettings.setText(QtWidgets.QApplication.translate("MainWindow", "Settings", None, -1))
+        self.actionOuvrir.setText(QtWidgets.QApplication.translate("MainWindow", "Ouvrir", None, -1))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
 
