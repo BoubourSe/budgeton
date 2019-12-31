@@ -6,10 +6,7 @@ from ui.mainwindow import MainWindow
 from conf import Conf
 
 
-
-
 if __name__ == "__main__":
-
     app = QApplication(sys.argv)
 
     win = MainWindow()
