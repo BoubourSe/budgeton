@@ -1,5 +1,5 @@
 
-from pathlib import Path, os
+from pathlib import Path
 import json
 
 class Conf:
