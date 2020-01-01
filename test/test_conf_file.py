@@ -61,10 +61,16 @@ class ConfTestCase(unittest.TestCase):
         self._cnf.set('toto', True)
         self.assertEqual(self._cnf.get('toto'), True)
 
-        f = open(self._default_directory.joinpath(self._default_file_name), 'r', encoding='utf-8')
+        f = open(
+            self._default_directory.joinpath(self._default_file_name),
+            'r',
+            encoding='utf-8')
+
         content = f.read()
         json_obj = json.loads(content)
         self.assertEqual(json_obj['toto'], True)
+
+        f.close()
 
 # main
 if __name__ == '__main__':
